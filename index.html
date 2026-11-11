@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory and Encoding Strategies</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">Psychology experiment</p>
+      <h1>Memory and Encoding Strategies</h1>
+      <p class="subhead">A short study of how different ways of learning information affect memory.</p>
+    </header>
+
+    <section id="welcome" class="panel">
+      <h2>Welcome</h2>
+      <p>You will study 18 words across three short blocks. Each block uses a different strategy. Afterward, you will complete a brief counting task and then recall as many studied words as you can.</p>
+      <p><strong>Important:</strong> Study each word carefully. Do not write words down or take screenshots. During recall, enter as many studied words as you remember, separated by commas or spaces.</p>
+      <label class="field-label" for="participant-id">Participant code (optional)</label>
+      <input id="participant-id" type="text" maxlength="40" placeholder="e.g., P001">
+      <button id="start-button" class="primary">Begin experiment</button>
+    </section>
+
+    <section id="stage" class="panel hidden" aria-live="polite">
+      <div class="progress-row">
+        <span id="stage-label">Block 1 of 3</span>
+        <span id="progress-label"></span>
+      </div>
+      <div class="progress-track"><div id="progress-bar"></div></div>
+      <div id="stage-content"></div>
+    </section>
+
+    <section id="results" class="panel hidden">
+      <h2>Your results</h2>
+      <p id="result-intro"></p>
+      <div id="result-table"></div>
+      <div class="button-row">
+        <button id="summary-download" class="primary">Download summary CSV</button>
+        <button id="trials-download" class="secondary">Download trial-level CSV</button>
+      </div>
+      <p class="small-note">The files are generated in your browser and downloaded to your device. No data is sent to a server.</p>
+      <button id="restart-button" class="text-button">Run another session</button>
+    </section>
+
+    <footer>Static browser-based experiment · Data stays on this device</footer>
+  </main>
+</body>
+</html>
